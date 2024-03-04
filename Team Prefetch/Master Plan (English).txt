@@ -1,0 +1,29 @@
+Week 01:
+Completing the back-end of "Admin Login" part of the "Admin" module.
+
+Week 02:
+Designing the database schema for the "Admin" module.
+
+Week 03:
+Completing "View Datails of Users and Offices" for the "Admin" module.
+
+Week 04:
+Completing the back-end of "User Login" part of the "User" module.
+
+Week 05 and Week 06:
+Completing the back-end of "Complain", "Suggestion", "Request" part of the "User" module and connecting through the database.
+
+Week 07:
+Showing only plain text for the submitted data ("Complain", "Suggestion", "Request") of an user from the database (e.g Newsfeed scroll).
+
+Week 08:
+Checking if all the modules are working properly and bug fixing.
+
+Week 09 and Week 10:
+Desiging the front-end of the total system and UI/UX improvements.
+
+Week 11:
+Real-life testing and quality assurance of the system.
+
+Week 12:
+Making final presentation and preparing the system for the final submission. 
