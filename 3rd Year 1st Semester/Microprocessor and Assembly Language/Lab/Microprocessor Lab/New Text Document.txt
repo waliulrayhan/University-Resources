@@ -1,0 +1,239 @@
+01.Sort numbers in ascending and descending
+
+
+
+
+
+
+02.Seven segment display interface
+
+
+
+
+
+
+03.Search for a character in a string
+
+
+
+
+
+
+04.Program to display a string
+
+
+
+
+
+
+05.Find smallest number
+
+
+
+
+
+
+06.Find largest number
+
+
+
+
+
+
+07.Convert lowercase letter to uppercase
+
+
+
+
+
+
+08.Addition of n numbers
+
+
+
+
+
+
+09.Add 2 numbers
+
+
+
+
+
+
+10.32-bit Addition using DD directive
+
+
+
+
+
+
+11.16-bit Subtraction
+
+
+
+
+
+
+12.Subtraction of n numbers
+
+
+
+
+
+
+13.Find square and cube of a number
+
+
+
+
+
+
+14.Find LCM of a given number
+
+
+
+
+
+
+15.Find Largest number using dos display interrupts
+
+
+
+
+
+
+16.Find GCD of two numbers
+
+
+
+
+
+
+17.Find factorial of a given number.
+
+
+
+
+
+
+18.Program to check for Palindrome
+
+
+
+
+
+
+19.Program for string transfer
+
+
+
+
+
+
+20.Program for Reverse a string
+
+
+
+
+
+
+21.Nibble wise Palindrome
+
+
+
+
+
+
+22.Logical ones and zeroes in given data
+
+
+
+
+
+
+23.Find the data is positive or negative
+
+
+
+
+
+
+24.Find the data is odd or even
+
+
+
+
+
+
+25. Bitwise Palindrome
+
+
+
+
+
+
+26.Binary to BCD code conversion
+
+
+
+
+
+
+27. BCD to Binary code conversion
+
+
+
+
+
+
+28.ASCII adjustment Instructions
+
+
+
+
+
+
+29.32-bit Addition
+
+
+
+
+
+
+30.16-bit multiplication of signed numbers
+
+
+
+
+
+
+31.16-bit multiplication of unsigned numbers
+
+
+
+
+
+
+32.16-bit division of unsigned numbers
+
+
+
+
+
+
+33.16-bit division of unsigned numbers
+
+
+
+
+
+
+34.8-bit division for signed number
+
+
+
+
+
+
+35.8-bit division for unsigned number
