@@ -1,0 +1,303 @@
+1.
+
+
+
+
+
+
+2. Shifting
+
+Experiment 15: A discrete time signal x(n) is shown in figure. Sketch the signal x[n], y[n]=x[n-4] and x[n+4], derived from x[n].
+
+% Clear the command window and workspace
+clc;
+clear;
+
+% Define the discrete time index
+n = -5:5;
+
+% Define the original signal x[n]
+x = [0 -1 -0.5 0.5 1 1 1 1 0.5 0 0];
+
+% Plot the original signal
+subplot(3,1,1);
+stem(n, x);
+xlabel('Time Sample');
+ylabel('Amplitude');
+title('Original Signal');
+axis([-7 7 min(x)-2 max(x)+2]);
+grid on;
+grid minor;
+
+% Right-shift the signal by 4 units (y[n] = x[n-4])
+m = n + 4; 
+subplot(3,1,2);
+stem(m, x);
+xlabel('Time Sample');
+ylabel('Amplitude');
+title('Time right shifted signal y[n]=x[n-4]');
+axis([-7-2+4 7+2+4 min(x)-2 max(x)+2]);
+grid on;
+grid minor;
+
+% Left-shift the signal by 4 units (x[n+4])
+l = n - 4; 
+subplot(3,1,3);
+stem(l, x);
+xlabel('Time Sample');
+ylabel('Amplitude');
+title('Time left shifted signal x[n+4]');
+axis([-7-2-4 7+2-4 min(x)-2 max(x)+2]);
+grid on;
+grid minor;
+
+
+
+(DSP_lab_manual_11thbatch)
+Ex- 18 : Find y[n]=x[n-3] and z[n]=x[n+2]
+
+
+% Clear the command window and workspace
+clc;
+clear;
+
+% Define the discrete time index
+n = -3:3;
+
+% Define the original signal X[n]
+x = [-2 0 1 -3 2 -1 3];
+
+% Plot the original signal X[n]
+subplot(3,1,1);
+stem(n, x);
+xlabel('Time Sample');
+ylabel('Amplitude');
+title('Original Signal X[n]');
+axis([-8 8 -4 4]);
+grid on;
+grid minor;
+
+% Right-shift the signal by 3 units (Y[n] = X[n-3])
+m = n + 3; 
+subplot(3,1,2);
+stem(m, x, 'b');
+xlabel('Time Sample');
+ylabel('Amplitude');
+title('Y[n] = X[n-3]');
+axis([-8 8 -4 4]);
+grid on;
+grid minor;
+
+% Left-shift the signal by 2 units (Z[n] = X[n+2])
+l = n - 2; 
+subplot(3,1,3);
+stem(l, x, 'r');
+xlabel('Time Sample');
+ylabel('Amplitude');
+title('Z[n] = X[n+2]');
+axis([-8 8 -4 4]);
+grid on;
+grid minor;
+
+---------------------------------------------------
+3. Scaling
+
+
+% Close all open figures, clear workspace, and clear command window
+close all;
+clear all;
+clc;
+
+% Define the original signal X[n]
+n = -6:6;
+y = [1 0.5 1 0.5 1 0.5 1 0.5 1 0.5 1 0.5 1];
+
+% Initialize variables for compressed signal (Y[n] = X[2n])
+index = 1;
+for i = 1:length(n)
+    % Create compressed signal by dividing time index by 2
+    x1(index) = n(i) / 2;
+    y1(index) = y(i);
+    index = index + 1;
+end
+
+% Plot the original signal X[n]
+subplot(3,1,1);
+stem(n, y);
+xlabel("Time domain");
+ylabel("Amplitude");
+grid on;
+axis([-8 8 -0.5 1.5]);
+title("Original signal X[n]");
+
+% Plot the compressed signal Y[n] = X[2n]
+subplot(3,1,2);
+stem(x1, y1, 'r');
+xlabel("Time domain");
+ylabel("Amplitude");
+grid on;
+grid minor;
+axis([-8 8 -0.5 1.5]);
+title("Compression signal Y[n] = X[2n]");
+
+% Initialize variables for expanded signal (Y[n] = X[n/2])
+index = 1;
+n2 = -12:12;
+for i = 1:length(n2)
+    x1(i) = n2(i);
+    if (rem(n2(i), 2) == 0)
+        % Create expanded signal by selecting every second element of the original signal
+        y1(i) = y(index);
+        index = index + 1;
+    else
+        y1(i) = 0; % Set odd-indexed samples to 0
+    end
+end
+
+% Plot the expanded signal Y[n] = X[n/2]
+subplot(3,1,3);
+stem(x1, y1, 'b');
+xlabel("Time domain");
+ylabel("Amplitude");
+grid on;
+grid minor;
+axis([-13 13 -0.5 1.5]);
+title("Expanding signal Y[n] = X[n/2]");
+---------------------------------------------------
+4. Precedence Rule
+
+
+% Clear the workspace, close all figures, and clear the command window
+close all;
+clear all;
+clc;
+
+% Define the original signal x[n] with time samples and amplitudes
+x1 = [-6:1:6]; % Time samples of original signal x[n]
+y1 = [0 0 0 0 -1 -1 0 1 1 0 0 0 0]; % Corresponding amplitudes of original signal x[n]
+
+% Plot the original signal
+subplot(3,1,1);
+stem(x1, y1);
+axis([-10 10 -2 2]); % Set axis limits for better visualization
+xlabel("Time sample(n)");
+ylabel("Amplitude");
+title("Original Signal: x[n]");
+
+% Generate a left-shifted version of the original signal x[n+3]
+x2 = x1 - 3; % Shift the time samples of x1 by 3 units to the left
+y2 = y1; % Maintain the same amplitude values as the original signal
+
+% Plot the left-shifted signal
+subplot(3,1,2);
+stem(x2, y2);
+axis([-10 10 -2 2]); % Same axis limits for comparison
+xlabel("Time sample(n)");
+ylabel("Amplitude");
+title("Left Shifted Signal: x[n+3]");
+
+% Define the scaling factor for amplitude compression
+value = 2; % This factor will divide the amplitudes by 2
+temp = 1; % Index counter for storing scaled samples
+
+% Loop through the time samples of the shifted signal
+for i = 1:length(x2)
+    % Scale the time sample and store it in a new array (x3)
+    x3(temp) = x2(i) / value;
+    % Maintain the corresponding amplitude from the original signal in y3
+    y3(temp) = y2(i);
+    % Increment the index counter for storing next scaled sample
+    temp = temp + 1;
+end
+
+% Plot the final scaled and shifted signal
+subplot(3,1,3);
+stem(x3, y3);
+axis([-10 10 -2 2]); % Same axis limits for comparison
+xlabel("Time sample(n)");
+ylabel("Amplitude");
+title("Final Signal: x[2n+3]");
+
+% This script demonstrates three steps:
+% 1. Defining and plotting the original signal x[n].
+% 2. Generating a left-shifted version of the original signal x[n+3].
+% 3. Scaling the amplitudes of the left-shifted signal by a factor of 2 and storing the combined result in x[2n+3].
+
+
+
+
+
+--------------------------------------------------
+5. Even and Odd components
+
+n = -2:2;
+x = [5,6,3,4,1];
+
+% Creating mirrored versions for negative indices
+x_mirror = fliplr(x); %x_mirror = [1,4,3,5,5]
+
+% even and odd components
+xe = (x + x_mirror) / 2; %xe= ( x(n)+x(-n) )/2;
+xo = (x - x_mirror) / 2; %xo= ( x(n)-x(-n) )/2;
+
+% Plotting
+subplot(4,1,1);
+stem(n, x); 
+grid on; 
+axis([-3 3 -1 7]);
+xlabel('n'); 
+ylabel('Amplitude'); 
+title('Original Signal');
+
+subplot(4,1,2);
+stem(n, x_mirror); 
+grid on; 
+axis([-3 3 -1 7]);
+xlabel('n'); 
+ylabel('Amplitude'); 
+title('Reversed Signal');
+
+subplot(4,1,3); 
+stem(n, xe, 'b'); 
+grid on; 
+axis([-3 3 -1 6]);
+xlabel('n'); 
+ylabel('Amplitude'); 
+title('Even Signal');
+
+subplot(4,1,4); 
+stem(n, xo, 'b'); 
+grid on; 
+axis([-3 3 -3 3]);
+xlabel('n'); 
+ylabel('Amplitude'); 
+title('Odd Signal');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

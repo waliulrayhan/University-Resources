@@ -1,0 +1,43 @@
+## Even and Odd Composition
+n = -2:2;
+x = [5,6,3,4,1];
+
+% Creating mirrored versions for negative indices
+x_mirror = fliplr(x); %x_mirror = [1,4,3,5,5]
+
+% even and odd components
+xe = (x + x_mirror) / 2; %xe= ( x(n)+x(-n) )/2;
+xo = (x - x_mirror) / 2; %xo= ( x(n)-x(-n) )/2;
+
+% Plotting
+subplot(4,1,1);
+stem(n, x); 
+grid on; 
+axis([-3 3 -1 7]);
+xlabel('n'); 
+ylabel('Amplitude'); 
+title('Original Signal');
+
+subplot(4,1,2);
+stem(n, x_mirror); 
+grid on; 
+axis([-3 3 -1 7]);
+xlabel('n'); 
+ylabel('Amplitude'); 
+title('Reversed Signal');
+
+subplot(4,1,3); 
+stem(n, xe, 'b'); 
+grid on; 
+axis([-3 3 -1 6]);
+xlabel('n'); 
+ylabel('Amplitude'); 
+title('Even Signal');
+
+subplot(4,1,4); 
+stem(n, xo, 'b'); 
+grid on; 
+axis([-3 3 -3 3]);
+xlabel('n'); 
+ylabel('Amplitude'); 
+title('Odd Signal');

@@ -1,0 +1,55 @@
+## Precedence Rule
+% Clear the workspace, close all figures, and clear the command window
+close all;
+clc;
+
+% Define the original signal x[n] with time samples and amplitudes
+x1 = [-6:1:6]; % Time samples of original signal x[n]
+y1 = [0 0 0 0 -1 -1 0 1 1 0 0 0 0]; % Corresponding amplitudes of original signal x[n]
+
+% Plot the original signal
+subplot(3,1,1);
+stem(x1, y1);
+axis([-10 10 -2 2]); % Set axis limits for better visualization
+xlabel("Time sample(n)");
+ylabel("Amplitude");
+title("Original Signal: x[n]");
+
+% Generate a left-shifted version of the original signal x[n+3]
+x2 = x1 - 3; % Shift the time samples of x1 by 3 units to the left
+y2 = y1; % Maintain the same amplitude values as the original signal
+
+% Plot the left-shifted signal
+subplot(3,1,2);
+stem(x2, y2);
+axis([-10 10 -2 2]); % Same axis limits for comparison
+xlabel("Time sample(n)");
+ylabel("Amplitude");
+title("Left Shifted Signal: x[n+3]");
+
+% Define the scaling factor for amplitude compression
+value = 2; % This factor will divide the amplitudes by 2
+temp = 1; % Index counter for storing scaled samples
+
+% Loop through the time samples of the shifted signal
+for i = 1:length(x2)
+    % Scale the time sample and store it in a new array (x3)
+    x3(temp) = x2(i) / value;
+    % Maintain the corresponding amplitude from the original signal in y3
+    y3(temp) = y2(i);
+    % Increment the index counter for storing next scaled sample
+    temp = temp + 1;
+end
+
+% Plot the final scaled and shifted signal
+subplot(3,1,3);
+stem(x3, y3);
+axis([-10 10 -2 2]); % Same axis limits for comparison
+xlabel("Time sample(n)");
+ylabel("Amplitude");
+title("Final Signal: x[2n+3]");
+
+% This script demonstrates three steps:
+% 1. Defining and plotting the original signal x[n].
+% 2. Generating a left-shifted version of the original signal x[n+3].
+% 3. Scaling the amplitudes of the left-shifted signal by a factor of 2 and storing the combined result in x[2n+3].

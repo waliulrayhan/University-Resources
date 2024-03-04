@@ -1,0 +1,88 @@
+<mxfile host="app.diagrams.net" modified="2024-02-21T16:37:33.911Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36" etag="-CKdP60aswBiQthblZGq" version="23.1.5" type="device">
+  <diagram name="Page-1" id="uCOmJcvVAOK0WVIX3gkm">
+    <mxGraphModel dx="1050" dy="522" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="iqFMaKtD4wW0Piwt9p-v-1" value="Actor" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="50" y="290" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="iqFMaKtD4wW0Piwt9p-v-2" value="Distance Measurement" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="260" y="120" width="180" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="iqFMaKtD4wW0Piwt9p-v-4" value="&lt;div&gt;Can see the distance in Centi Meter&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="520" y="170" width="240" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="iqFMaKtD4wW0Piwt9p-v-5" value="&lt;div&gt;Can see the distance in&amp;nbsp;&lt;span style=&quot;background-color: initial;&quot;&gt;Meter&lt;/span&gt;&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="450" y="270" width="240" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="iqFMaKtD4wW0Piwt9p-v-6" value="&lt;div&gt;Turn on Device&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="280" y="200" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="iqFMaKtD4wW0Piwt9p-v-7" value="&lt;div&gt;Turn off Device&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="280" y="280" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="iqFMaKtD4wW0Piwt9p-v-8" value="&lt;div&gt;Flash the Device&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="280" y="360" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="iqFMaKtD4wW0Piwt9p-v-9" value="Change the Battery" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="280" y="440" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="iqFMaKtD4wW0Piwt9p-v-13" value="" style="endArrow=none;dashed=1;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="iqFMaKtD4wW0Piwt9p-v-2" target="iqFMaKtD4wW0Piwt9p-v-4">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="390" y="270" as="sourcePoint" />
+            <mxPoint x="440" y="220" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="iqFMaKtD4wW0Piwt9p-v-15" value="" style="endArrow=none;dashed=1;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="iqFMaKtD4wW0Piwt9p-v-2" target="iqFMaKtD4wW0Piwt9p-v-5">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="390" y="270" as="sourcePoint" />
+            <mxPoint x="440" y="220" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="iqFMaKtD4wW0Piwt9p-v-16" value="&amp;lt;&amp;lt;extended&amp;gt;&amp;gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;rotation=10;" vertex="1" parent="1">
+          <mxGeometry x="510" y="130" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="iqFMaKtD4wW0Piwt9p-v-17" value="&amp;lt;&amp;lt;extended&amp;gt;&amp;gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;rotation=45;" vertex="1" parent="1">
+          <mxGeometry x="460" y="200" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="iqFMaKtD4wW0Piwt9p-v-21" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.3333333333333333;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="iqFMaKtD4wW0Piwt9p-v-1" target="iqFMaKtD4wW0Piwt9p-v-2">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="390" y="320" as="sourcePoint" />
+            <mxPoint x="440" y="270" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="iqFMaKtD4wW0Piwt9p-v-22" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.3333333333333333;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="iqFMaKtD4wW0Piwt9p-v-1" target="iqFMaKtD4wW0Piwt9p-v-6">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="390" y="320" as="sourcePoint" />
+            <mxPoint x="440" y="270" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="iqFMaKtD4wW0Piwt9p-v-23" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.3333333333333333;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="iqFMaKtD4wW0Piwt9p-v-1" target="iqFMaKtD4wW0Piwt9p-v-7">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="390" y="390" as="sourcePoint" />
+            <mxPoint x="440" y="340" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="iqFMaKtD4wW0Piwt9p-v-24" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.3333333333333333;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="iqFMaKtD4wW0Piwt9p-v-1" target="iqFMaKtD4wW0Piwt9p-v-8">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="160" y="300" as="sourcePoint" />
+            <mxPoint x="440" y="380" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="iqFMaKtD4wW0Piwt9p-v-25" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.3333333333333333;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="iqFMaKtD4wW0Piwt9p-v-1" target="iqFMaKtD4wW0Piwt9p-v-9">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="390" y="450" as="sourcePoint" />
+            <mxPoint x="440" y="400" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="iqFMaKtD4wW0Piwt9p-v-28" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="190" y="10" width="610" height="540" as="geometry" />
+        </mxCell>
+        <mxCell id="iqFMaKtD4wW0Piwt9p-v-29" value="Portable Ultrasonic Range Meter for Non-Contact Distance Measurement.&lt;span style=&quot;font-size: 11pt; line-height: 107%; font-family: Calibri, sans-serif;&quot;&gt;&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="292" y="40" width="396" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
